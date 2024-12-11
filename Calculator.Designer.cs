@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.inputBox = new System.Windows.Forms.TextBox();
+            this.operationDisplay = new System.Windows.Forms.TextBox();
+            this.clearButton = new CalculatorButton();
+            this.clearEntryButton = new CalculatorButton();
             this.deleteButton = new CalculatorButton();
             this.number0 = new CalculatorButton();
             this.decimalButton = new CalculatorButton();
@@ -46,11 +50,62 @@
             this.number7 = new CalculatorButton();
             this.number8 = new CalculatorButton();
             this.number9 = new CalculatorButton();
-            this.inputBox = new System.Windows.Forms.TextBox();
-            this.clearEntryButton = new CalculatorButton();
-            this.clearButton = new CalculatorButton();
-            this.operationDisplay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // inputBox
+            // 
+            this.inputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputBox.Location = new System.Drawing.Point(12, 35);
+            this.inputBox.Name = "inputBox";
+            this.inputBox.ReadOnly = true;
+            this.inputBox.Size = new System.Drawing.Size(322, 80);
+            this.inputBox.TabIndex = 23;
+            this.inputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // operationDisplay
+            // 
+            this.operationDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.operationDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.operationDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operationDisplay.Location = new System.Drawing.Point(12, 4);
+            this.operationDisplay.Multiline = true;
+            this.operationDisplay.Name = "operationDisplay";
+            this.operationDisplay.ReadOnly = true;
+            this.operationDisplay.Size = new System.Drawing.Size(322, 31);
+            this.operationDisplay.TabIndex = 27;
+            this.operationDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearButton.BackgroundImage = global::Calculator.Properties.Resources.button;
+            this.clearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clearButton.ButtonType = null;
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(178, 131);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(156, 35);
+            this.clearButton.TabIndex = 26;
+            this.clearButton.Text = "C";
+            this.clearButton.UseVisualStyleBackColor = false;
+            // 
+            // clearEntryButton
+            // 
+            this.clearEntryButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearEntryButton.BackgroundImage = global::Calculator.Properties.Resources.button;
+            this.clearEntryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clearEntryButton.ButtonType = null;
+            this.clearEntryButton.FlatAppearance.BorderSize = 0;
+            this.clearEntryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearEntryButton.Location = new System.Drawing.Point(12, 131);
+            this.clearEntryButton.Name = "clearEntryButton";
+            this.clearEntryButton.Size = new System.Drawing.Size(156, 35);
+            this.clearEntryButton.TabIndex = 25;
+            this.clearEntryButton.Text = "CE";
+            this.clearEntryButton.UseVisualStyleBackColor = false;
             // 
             // deleteButton
             // 
@@ -340,59 +395,6 @@
             this.number9.Text = "9";
             this.number9.UseVisualStyleBackColor = false;
             // 
-            // inputBox
-            // 
-            this.inputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputBox.Location = new System.Drawing.Point(12, 35);
-            this.inputBox.Name = "inputBox";
-            this.inputBox.Size = new System.Drawing.Size(322, 80);
-            this.inputBox.TabIndex = 23;
-            this.inputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // clearEntryButton
-            // 
-            this.clearEntryButton.BackColor = System.Drawing.Color.Transparent;
-            this.clearEntryButton.BackgroundImage = global::Calculator.Properties.Resources.button;
-            this.clearEntryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clearEntryButton.ButtonType = null;
-            this.clearEntryButton.FlatAppearance.BorderSize = 0;
-            this.clearEntryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearEntryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearEntryButton.Location = new System.Drawing.Point(12, 131);
-            this.clearEntryButton.Name = "clearEntryButton";
-            this.clearEntryButton.Size = new System.Drawing.Size(156, 35);
-            this.clearEntryButton.TabIndex = 25;
-            this.clearEntryButton.Text = "CE";
-            this.clearEntryButton.UseVisualStyleBackColor = false;
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.Transparent;
-            this.clearButton.BackgroundImage = global::Calculator.Properties.Resources.button;
-            this.clearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clearButton.ButtonType = null;
-            this.clearButton.FlatAppearance.BorderSize = 0;
-            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(178, 131);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(156, 35);
-            this.clearButton.TabIndex = 26;
-            this.clearButton.Text = "C";
-            this.clearButton.UseVisualStyleBackColor = false;
-            // 
-            // operationDisplay
-            // 
-            this.operationDisplay.BackColor = System.Drawing.SystemColors.Control;
-            this.operationDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.operationDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operationDisplay.Location = new System.Drawing.Point(12, 4);
-            this.operationDisplay.Multiline = true;
-            this.operationDisplay.Name = "operationDisplay";
-            this.operationDisplay.Size = new System.Drawing.Size(322, 31);
-            this.operationDisplay.TabIndex = 27;
-            this.operationDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,8 +422,10 @@
             this.Controls.Add(this.number7);
             this.Controls.Add(this.number8);
             this.Controls.Add(this.number9);
+            this.KeyPreview = true;
             this.Name = "Calculator";
             this.Text = "Calculator";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,10 +450,10 @@
         private CalculatorButton decimalButton;
         private CalculatorButton signButton;
         private CalculatorButton deleteButton;
-        private System.Windows.Forms.TextBox inputBox;
         private CalculatorButton clearEntryButton;
         private CalculatorButton clearButton;
         private System.Windows.Forms.TextBox operationDisplay;
+        private System.Windows.Forms.TextBox inputBox;
     }
 }
 

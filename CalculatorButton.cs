@@ -41,13 +41,13 @@ namespace Calculator
 
             if (calculator != null)
             {
-                if (int.TryParse(ButtonType, out _))
+                if (int.TryParse(ButtonType, out _) || ButtonType == ".")
                 {
                     calculator.TypeNumber(this);
                 }
                 else if (ButtonType == "+/-")
                 {
-                    calculator.SignNumber(this);
+                    calculator.SignNumber();
                 }
                 else if (calculator.Operators.Contains(ButtonType))
                 {
@@ -58,8 +58,6 @@ namespace Calculator
                     calculator.ClearOperation(this);
                 }
             }
-
-            //MessageBox.Show($"This button's ButtonType is: {ButtonType}");
         }
     }
 }
